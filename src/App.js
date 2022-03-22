@@ -3,8 +3,6 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import Card from './components/Card';
 
-
-
 function App() {
 
   function num1000(min, max) {
@@ -14,9 +12,7 @@ function App() {
     return (Math.round(Math.random() * 200))
   }
 
-
   const server = 'https://dev.meta365.eu/wp-json/wp/v2/image?_embed'
-
 
   const [data, setData] = useState([])
   const [currentObject,setCurrentObject] = useState(null)
@@ -32,8 +28,6 @@ function App() {
       .catch(err => console.log(err))
   }, [])
 
-  console.log(data);
-
   return (
     <div className="App">
 
@@ -44,6 +38,7 @@ function App() {
         key={currentObject.id + 1000}
         title = {currentObject.title}
         imageUrl = {currentObject.imageUrl}
+        setCurrentObject = {setCurrentObject}
         /> : ''
         }
       </div>

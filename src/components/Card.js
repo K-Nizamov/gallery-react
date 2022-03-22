@@ -1,13 +1,7 @@
 
-import bmw from '../images/bmw.png'
-
-
-
 function Card({ setCurrentObject, imageUrl, title, id, x, y, rotation }) {
 
     const degree = `${rotation}deg`
-
-
 
     return (
         <>
